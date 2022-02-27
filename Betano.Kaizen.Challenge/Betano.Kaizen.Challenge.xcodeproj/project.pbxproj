@@ -1,0 +1,792 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A17F417A27CBC4F8000F8500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F417927CBC4F8000F8500 /* AppDelegate.swift */; };
+		A17F417C27CBC4F8000F8500 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F417B27CBC4F8000F8500 /* SceneDelegate.swift */; };
+		A17F418327CBC4FB000F8500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A17F418227CBC4FB000F8500 /* Assets.xcassets */; };
+		A17F418627CBC4FB000F8500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A17F418427CBC4FB000F8500 /* LaunchScreen.storyboard */; };
+		A17F419127CBC4FB000F8500 /* Betano_Kaizen_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F419027CBC4FB000F8500 /* Betano_Kaizen_ChallengeTests.swift */; };
+		A17F419B27CBC4FB000F8500 /* Betano_Kaizen_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F419A27CBC4FB000F8500 /* Betano_Kaizen_ChallengeUITests.swift */; };
+		A17F419D27CBC4FB000F8500 /* Betano_Kaizen_ChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F419C27CBC4FB000F8500 /* Betano_Kaizen_ChallengeUITestsLaunchTests.swift */; };
+		A17F41B627CBD08E000F8500 /* TableViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F41B527CBD08E000F8500 /* TableViewConfigurator.swift */; };
+		A17F41B827CBD157000F8500 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F41B727CBD157000F8500 /* TableViewController.swift */; };
+		A17F41BC27CBD322000F8500 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F41BB27CBD322000F8500 /* ViewModel.swift */; };
+		A17F41BE27CBDBC5000F8500 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F41BD27CBDBC5000F8500 /* TableViewModel.swift */; };
+		A17F41C327CBE256000F8500 /* CancellableBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F41C227CBE256000F8500 /* CancellableBag.swift */; };
+		A17F41C527CBE4AB000F8500 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F41C427CBE4AB000F8500 /* Driver.swift */; };
+		A17F41C827CBE4F6000F8500 /* CombineExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F41C727CBE4F6000F8500 /* CombineExtensions.swift */; };
+		A17F41CA27CBE61A000F8500 /* Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F41C927CBE61A000F8500 /* Trigger.swift */; };
+		A17F41CC27CBE858000F8500 /* TableViewDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F41CB27CBE858000F8500 /* TableViewDataProvider.swift */; };
+		A17F41CE27CBE955000F8500 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F41CD27CBE955000F8500 /* TableViewDataSource.swift */; };
+		A17F41D027CBF460000F8500 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F41CF27CBF460000F8500 /* ArrayExtensions.swift */; };
+		A17F41D227CBF50A000F8500 /* RandomAccessCollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F41D127CBF50A000F8500 /* RandomAccessCollectionExtensions.swift */; };
+		A17F41D427CC2EF6000F8500 /* TableViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F41D327CC2EF6000F8500 /* TableViewCoordinator.swift */; };
+		A17F41D727CC368F000F8500 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A17F41D627CC368F000F8500 /* SnapKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A17F418D27CBC4FB000F8500 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A17F416E27CBC4F8000F8500 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A17F417527CBC4F8000F8500;
+			remoteInfo = Betano.Kaizen.Challenge;
+		};
+		A17F419727CBC4FB000F8500 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A17F416E27CBC4F8000F8500 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A17F417527CBC4F8000F8500;
+			remoteInfo = Betano.Kaizen.Challenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A17F417627CBC4F8000F8500 /* Betano.Kaizen.Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Betano.Kaizen.Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A17F417927CBC4F8000F8500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A17F417B27CBC4F8000F8500 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A17F418227CBC4FB000F8500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A17F418527CBC4FB000F8500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A17F418727CBC4FB000F8500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A17F418C27CBC4FB000F8500 /* Betano.Kaizen.ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Betano.Kaizen.ChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A17F419027CBC4FB000F8500 /* Betano_Kaizen_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Betano_Kaizen_ChallengeTests.swift; sourceTree = "<group>"; };
+		A17F419627CBC4FB000F8500 /* Betano.Kaizen.ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Betano.Kaizen.ChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A17F419A27CBC4FB000F8500 /* Betano_Kaizen_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Betano_Kaizen_ChallengeUITests.swift; sourceTree = "<group>"; };
+		A17F419C27CBC4FB000F8500 /* Betano_Kaizen_ChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Betano_Kaizen_ChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A17F41B527CBD08E000F8500 /* TableViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewConfigurator.swift; sourceTree = "<group>"; };
+		A17F41B727CBD157000F8500 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		A17F41BB27CBD322000F8500 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		A17F41BD27CBDBC5000F8500 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		A17F41C227CBE256000F8500 /* CancellableBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellableBag.swift; sourceTree = "<group>"; };
+		A17F41C427CBE4AB000F8500 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		A17F41C727CBE4F6000F8500 /* CombineExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineExtensions.swift; sourceTree = "<group>"; };
+		A17F41C927CBE61A000F8500 /* Trigger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trigger.swift; sourceTree = "<group>"; };
+		A17F41CB27CBE858000F8500 /* TableViewDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataProvider.swift; sourceTree = "<group>"; };
+		A17F41CD27CBE955000F8500 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		A17F41CF27CBF460000F8500 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
+		A17F41D127CBF50A000F8500 /* RandomAccessCollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAccessCollectionExtensions.swift; sourceTree = "<group>"; };
+		A17F41D327CC2EF6000F8500 /* TableViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCoordinator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A17F417327CBC4F8000F8500 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A17F41D727CC368F000F8500 /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A17F418927CBC4FB000F8500 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A17F419327CBC4FB000F8500 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A17F416D27CBC4F8000F8500 = {
+			isa = PBXGroup;
+			children = (
+				A17F417827CBC4F8000F8500 /* Betano.Kaizen.Challenge */,
+				A17F418F27CBC4FB000F8500 /* Betano.Kaizen.ChallengeTests */,
+				A17F419927CBC4FB000F8500 /* Betano.Kaizen.ChallengeUITests */,
+				A17F417727CBC4F8000F8500 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A17F417727CBC4F8000F8500 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A17F417627CBC4F8000F8500 /* Betano.Kaizen.Challenge.app */,
+				A17F418C27CBC4FB000F8500 /* Betano.Kaizen.ChallengeTests.xctest */,
+				A17F419627CBC4FB000F8500 /* Betano.Kaizen.ChallengeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A17F417827CBC4F8000F8500 /* Betano.Kaizen.Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				A17F41AD27CBCFC1000F8500 /* UI Screens */,
+				A17F41AB27CBCDD0000F8500 /* Launch Files */,
+				A17F41AA27CBCD3A000F8500 /* Utilities */,
+				A17F418427CBC4FB000F8500 /* LaunchScreen.storyboard */,
+				A17F418727CBC4FB000F8500 /* Info.plist */,
+			);
+			path = Betano.Kaizen.Challenge;
+			sourceTree = "<group>";
+		};
+		A17F418F27CBC4FB000F8500 /* Betano.Kaizen.ChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				A17F419027CBC4FB000F8500 /* Betano_Kaizen_ChallengeTests.swift */,
+			);
+			path = Betano.Kaizen.ChallengeTests;
+			sourceTree = "<group>";
+		};
+		A17F419927CBC4FB000F8500 /* Betano.Kaizen.ChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A17F419A27CBC4FB000F8500 /* Betano_Kaizen_ChallengeUITests.swift */,
+				A17F419C27CBC4FB000F8500 /* Betano_Kaizen_ChallengeUITestsLaunchTests.swift */,
+			);
+			path = Betano.Kaizen.ChallengeUITests;
+			sourceTree = "<group>";
+		};
+		A17F41AA27CBCD3A000F8500 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A17F41C627CBE4E6000F8500 /* Extensions */,
+				A17F41C127CBE23F000F8500 /* Combine */,
+				A17F41B927CBD26C000F8500 /* Protocols */,
+				A17F41AC27CBCE1C000F8500 /* Assets */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A17F41AB27CBCDD0000F8500 /* Launch Files */ = {
+			isa = PBXGroup;
+			children = (
+				A17F417927CBC4F8000F8500 /* AppDelegate.swift */,
+				A17F417B27CBC4F8000F8500 /* SceneDelegate.swift */,
+			);
+			path = "Launch Files";
+			sourceTree = "<group>";
+		};
+		A17F41AC27CBCE1C000F8500 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A17F418227CBC4FB000F8500 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		A17F41AD27CBCFC1000F8500 /* UI Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A17F41AE27CBCFD7000F8500 /* TableView */,
+			);
+			path = "UI Screens";
+			sourceTree = "<group>";
+		};
+		A17F41AE27CBCFD7000F8500 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				A17F41B427CBD040000F8500 /* Coordinator */,
+				A17F41B327CBD02E000F8500 /* Data Source */,
+				A17F41B227CBD01F000F8500 /* Data Provider */,
+				A17F41B127CBD010000F8500 /* Configurator */,
+				A17F41B027CBD006000F8500 /* View Model */,
+				A17F41AF27CBCFF5000F8500 /* View Controller */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		A17F41AF27CBCFF5000F8500 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A17F41B727CBD157000F8500 /* TableViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		A17F41B027CBD006000F8500 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				A17F41BD27CBDBC5000F8500 /* TableViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		A17F41B127CBD010000F8500 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				A17F41B527CBD08E000F8500 /* TableViewConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		A17F41B227CBD01F000F8500 /* Data Provider */ = {
+			isa = PBXGroup;
+			children = (
+				A17F41CB27CBE858000F8500 /* TableViewDataProvider.swift */,
+			);
+			path = "Data Provider";
+			sourceTree = "<group>";
+		};
+		A17F41B327CBD02E000F8500 /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				A17F41CD27CBE955000F8500 /* TableViewDataSource.swift */,
+			);
+			path = "Data Source";
+			sourceTree = "<group>";
+		};
+		A17F41B427CBD040000F8500 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A17F41D327CC2EF6000F8500 /* TableViewCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A17F41B927CBD26C000F8500 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A17F41BA27CBD2EF000F8500 /* View Models */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A17F41BA27CBD2EF000F8500 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				A17F41BB27CBD322000F8500 /* ViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		A17F41C127CBE23F000F8500 /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				A17F41C227CBE256000F8500 /* CancellableBag.swift */,
+				A17F41C427CBE4AB000F8500 /* Driver.swift */,
+				A17F41C927CBE61A000F8500 /* Trigger.swift */,
+			);
+			path = Combine;
+			sourceTree = "<group>";
+		};
+		A17F41C627CBE4E6000F8500 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A17F41C727CBE4F6000F8500 /* CombineExtensions.swift */,
+				A17F41CF27CBF460000F8500 /* ArrayExtensions.swift */,
+				A17F41D127CBF50A000F8500 /* RandomAccessCollectionExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A17F417527CBC4F8000F8500 /* Betano.Kaizen.Challenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A17F41A027CBC4FB000F8500 /* Build configuration list for PBXNativeTarget "Betano.Kaizen.Challenge" */;
+			buildPhases = (
+				A17F417227CBC4F8000F8500 /* Sources */,
+				A17F417327CBC4F8000F8500 /* Frameworks */,
+				A17F417427CBC4F8000F8500 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Betano.Kaizen.Challenge;
+			packageProductDependencies = (
+				A17F41D627CC368F000F8500 /* SnapKit */,
+			);
+			productName = Betano.Kaizen.Challenge;
+			productReference = A17F417627CBC4F8000F8500 /* Betano.Kaizen.Challenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A17F418B27CBC4FB000F8500 /* Betano.Kaizen.ChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A17F41A327CBC4FB000F8500 /* Build configuration list for PBXNativeTarget "Betano.Kaizen.ChallengeTests" */;
+			buildPhases = (
+				A17F418827CBC4FB000F8500 /* Sources */,
+				A17F418927CBC4FB000F8500 /* Frameworks */,
+				A17F418A27CBC4FB000F8500 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A17F418E27CBC4FB000F8500 /* PBXTargetDependency */,
+			);
+			name = Betano.Kaizen.ChallengeTests;
+			productName = Betano.Kaizen.ChallengeTests;
+			productReference = A17F418C27CBC4FB000F8500 /* Betano.Kaizen.ChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A17F419527CBC4FB000F8500 /* Betano.Kaizen.ChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A17F41A627CBC4FB000F8500 /* Build configuration list for PBXNativeTarget "Betano.Kaizen.ChallengeUITests" */;
+			buildPhases = (
+				A17F419227CBC4FB000F8500 /* Sources */,
+				A17F419327CBC4FB000F8500 /* Frameworks */,
+				A17F419427CBC4FB000F8500 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A17F419827CBC4FB000F8500 /* PBXTargetDependency */,
+			);
+			name = Betano.Kaizen.ChallengeUITests;
+			productName = Betano.Kaizen.ChallengeUITests;
+			productReference = A17F419627CBC4FB000F8500 /* Betano.Kaizen.ChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A17F416E27CBC4F8000F8500 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					A17F417527CBC4F8000F8500 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					A17F418B27CBC4FB000F8500 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = A17F417527CBC4F8000F8500;
+					};
+					A17F419527CBC4FB000F8500 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = A17F417527CBC4F8000F8500;
+					};
+				};
+			};
+			buildConfigurationList = A17F417127CBC4F8000F8500 /* Build configuration list for PBXProject "Betano.Kaizen.Challenge" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A17F416D27CBC4F8000F8500;
+			packageReferences = (
+				A17F41D527CC368F000F8500 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
+			productRefGroup = A17F417727CBC4F8000F8500 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A17F417527CBC4F8000F8500 /* Betano.Kaizen.Challenge */,
+				A17F418B27CBC4FB000F8500 /* Betano.Kaizen.ChallengeTests */,
+				A17F419527CBC4FB000F8500 /* Betano.Kaizen.ChallengeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A17F417427CBC4F8000F8500 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A17F418627CBC4FB000F8500 /* LaunchScreen.storyboard in Resources */,
+				A17F418327CBC4FB000F8500 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A17F418A27CBC4FB000F8500 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A17F419427CBC4FB000F8500 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A17F417227CBC4F8000F8500 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A17F41B627CBD08E000F8500 /* TableViewConfigurator.swift in Sources */,
+				A17F41BE27CBDBC5000F8500 /* TableViewModel.swift in Sources */,
+				A17F41CC27CBE858000F8500 /* TableViewDataProvider.swift in Sources */,
+				A17F417A27CBC4F8000F8500 /* AppDelegate.swift in Sources */,
+				A17F41B827CBD157000F8500 /* TableViewController.swift in Sources */,
+				A17F41C827CBE4F6000F8500 /* CombineExtensions.swift in Sources */,
+				A17F41CA27CBE61A000F8500 /* Trigger.swift in Sources */,
+				A17F41BC27CBD322000F8500 /* ViewModel.swift in Sources */,
+				A17F41D227CBF50A000F8500 /* RandomAccessCollectionExtensions.swift in Sources */,
+				A17F41D027CBF460000F8500 /* ArrayExtensions.swift in Sources */,
+				A17F41C527CBE4AB000F8500 /* Driver.swift in Sources */,
+				A17F41D427CC2EF6000F8500 /* TableViewCoordinator.swift in Sources */,
+				A17F41CE27CBE955000F8500 /* TableViewDataSource.swift in Sources */,
+				A17F417C27CBC4F8000F8500 /* SceneDelegate.swift in Sources */,
+				A17F41C327CBE256000F8500 /* CancellableBag.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A17F418827CBC4FB000F8500 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A17F419127CBC4FB000F8500 /* Betano_Kaizen_ChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A17F419227CBC4FB000F8500 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A17F419B27CBC4FB000F8500 /* Betano_Kaizen_ChallengeUITests.swift in Sources */,
+				A17F419D27CBC4FB000F8500 /* Betano_Kaizen_ChallengeUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A17F418E27CBC4FB000F8500 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A17F417527CBC4F8000F8500 /* Betano.Kaizen.Challenge */;
+			targetProxy = A17F418D27CBC4FB000F8500 /* PBXContainerItemProxy */;
+		};
+		A17F419827CBC4FB000F8500 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A17F417527CBC4F8000F8500 /* Betano.Kaizen.Challenge */;
+			targetProxy = A17F419727CBC4FB000F8500 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A17F418427CBC4FB000F8500 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A17F418527CBC4FB000F8500 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A17F419E27CBC4FB000F8500 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A17F419F27CBC4FB000F8500 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A17F41A127CBC4FB000F8500 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8FURATXU72;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Betano.Kaizen.Challenge/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nuno.oliveira.marvel.challenge.Betano-Kaizen-Challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A17F41A227CBC4FB000F8500 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8FURATXU72;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Betano.Kaizen.Challenge/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nuno.oliveira.marvel.challenge.Betano-Kaizen-Challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A17F41A427CBC4FB000F8500 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8FURATXU72;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nuno.oliveira.marvel.challenge.Betano-Kaizen-ChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Betano.Kaizen.Challenge.app/Betano.Kaizen.Challenge";
+			};
+			name = Debug;
+		};
+		A17F41A527CBC4FB000F8500 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8FURATXU72;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nuno.oliveira.marvel.challenge.Betano-Kaizen-ChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Betano.Kaizen.Challenge.app/Betano.Kaizen.Challenge";
+			};
+			name = Release;
+		};
+		A17F41A727CBC4FB000F8500 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8FURATXU72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nuno.oliveira.marvel.challenge.Betano-Kaizen-ChallengeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Betano.Kaizen.Challenge;
+			};
+			name = Debug;
+		};
+		A17F41A827CBC4FB000F8500 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8FURATXU72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nuno.oliveira.marvel.challenge.Betano-Kaizen-ChallengeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Betano.Kaizen.Challenge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A17F417127CBC4F8000F8500 /* Build configuration list for PBXProject "Betano.Kaizen.Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A17F419E27CBC4FB000F8500 /* Debug */,
+				A17F419F27CBC4FB000F8500 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A17F41A027CBC4FB000F8500 /* Build configuration list for PBXNativeTarget "Betano.Kaizen.Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A17F41A127CBC4FB000F8500 /* Debug */,
+				A17F41A227CBC4FB000F8500 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A17F41A327CBC4FB000F8500 /* Build configuration list for PBXNativeTarget "Betano.Kaizen.ChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A17F41A427CBC4FB000F8500 /* Debug */,
+				A17F41A527CBC4FB000F8500 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A17F41A627CBC4FB000F8500 /* Build configuration list for PBXNativeTarget "Betano.Kaizen.ChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A17F41A727CBC4FB000F8500 /* Debug */,
+				A17F41A827CBC4FB000F8500 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A17F41D527CC368F000F8500 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A17F41D627CC368F000F8500 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A17F41D527CC368F000F8500 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A17F416E27CBC4F8000F8500 /* Project object */;
+}
