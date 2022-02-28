@@ -33,8 +33,6 @@ class TableViewController: UIViewController, TableViewControllerType {
         super.viewDidLoad()
         setupbackgroundColor(with: bgColor)
         setupNavBarTitle(with: navBarTitle)
-//        setupViewModel(with: viewModel)
-//        setupDataProvider(with: dataProvider)
         setupTableView(with: tableViewStyle)
         bindViewModel()
         viewDidLoadTrigger.trigger()
@@ -68,16 +66,11 @@ class TableViewController: UIViewController, TableViewControllerType {
         title = navBarTitle
     }
 
-    private func setupViewModel(with viewModel: TableViewModel) {
-        self.viewModel = viewModel
-    }
-
-    private func setupDataProvider(with dataProvider: TableViewDataProvider) {
-        self.dataProvider = dataProvider
-    }
-
     private func setupTableView(with style: UITableView.Style = .plain) {
         tableView = UITableView(frame: .zero, style: style)
+        tableView.dataSource = dataProvider.dataSource
+        tableView.delegate = dataProvider
+
         view.addSubview(tableView)
         tableView.snp.removeConstraints()
         tableView.snp.makeConstraints { make in
@@ -85,13 +78,29 @@ class TableViewController: UIViewController, TableViewControllerType {
         }
     }
 
+    // MARK: - Bind
+
     private func bindViewModel() {
         let output = viewModel.transform(input: TableViewModel.Input(viewDidLoadTrigger: viewDidLoadTrigger.asDriver(),
                                                                      selectedIndexPath: dataProvider.selectedIndexPath),
                                          disposeBag: cancellables)
 
-        output.reloadDataTrigger.sink { [weak self] _ in
+        output.reloadDataTrigger.sink { [weak self] dataSourceData in
             guard let self = self else { return }
+            self.updateDataSourceContent(with: dataSourceData)
+            self.reloadTable()
         }.store(in: cancellables)
+    }
+
+    private func reloadTable() {
+        executeInMainThread {
+            self.tableView.reloadData()
+        }
+    }
+
+    // MARK: - Update Methods
+
+    private func updateDataSourceContent(with data: [ViewModelSection]?) {
+        dataProvider.dataSource.updateDataSource(with: data)
     }
 }

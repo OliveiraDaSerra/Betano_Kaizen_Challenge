@@ -8,36 +8,14 @@
 import Foundation
 import UIKit
 
-struct HeaderFooterDataContent {
-    var title: String?
-}
-
-struct HeaderFooterData {
-    var headerData: HeaderFooterDataContent?
-    var footerData: HeaderFooterDataContent?
-}
-
-class ViewModelSection {
-    var key: String?
-    var headerFooterData: HeaderFooterData?
-    var expanded: Bool
-    var fields: [String]?
-
-    init(with key: String?,
-         headerFooterData: HeaderFooterData?,
-         isExpanded: Bool = false,
-         fields: [String]? = nil) {
-        self.key = key
-        self.headerFooterData = headerFooterData
-        self.expanded = isExpanded
-        self.fields = fields
-    }
-}
-
 class DataSource: NSObject {
     var viewModelSections: [ViewModelSection]?
 
     init(with sections: [ViewModelSection]? = nil) {
+        self.viewModelSections = sections
+    }
+
+    func updateDataSource(with sections: [ViewModelSection]? = nil) {
         self.viewModelSections = sections
     }
 }

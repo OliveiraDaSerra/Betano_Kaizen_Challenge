@@ -17,10 +17,15 @@ class DataProvider: NSObject {
     }
 }
 
-class TableViewDataProvider: DataProvider, UITableViewDelegate {
+class TableViewDataProvider: NSObject, UITableViewDelegate {
 
     // MARK: - Properties
+    var dataSource: TableViewDataSource!
     var selectedIndexPath = PassthroughSubject<IndexPath, Never>()
+
+    init(with dataSource: TableViewDataSource) {
+        self.dataSource = dataSource
+    }
 
     // MARK: - UITableViewDelegate Methods
 
