@@ -7,30 +7,21 @@
 
 import Foundation
 
-struct HeaderFooterDataContent {
-    var title: String?
-}
+typealias SectionReturnHandler = (String?, String?) -> Void
 
-struct HeaderFooterData {
-    var headerData: HeaderFooterDataContent?
-    var footerData: HeaderFooterDataContent?
-}
-
-class ViewModelSection: ElementIdentity {
+class ViewModelSection: SectionElementIdentity {
     var key: String?
-    var title: String?
-    var headerFooterData: HeaderFooterData?
+    var titleData: HeaderFooterData?
     var expanded: Bool
     var fields: [FieldBase]?
+    var handler: SectionReturnHandler?
 
     init(with key: String? = nil,
-         title: String? = nil,
-         headerFooterData: HeaderFooterData?,
+         titleData: HeaderFooterData?,
          isExpanded: Bool = false,
          fields: [FieldBase]? = nil) {
         self.key = key
-        self.title = title
-        self.headerFooterData = headerFooterData
+        self.titleData = titleData
         self.expanded = isExpanded
         self.fields = fields
     }

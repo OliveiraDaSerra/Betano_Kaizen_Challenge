@@ -29,7 +29,7 @@ extension GameSection {
     func asViewModelSection() -> ViewModelSection {
         let gamesInfoData = gamesInfo?.compactMap({ $0.asField() }) ?? []
         return ViewModelSection(with: sportID,
-                                headerFooterData: HeaderFooterData(headerData: HeaderFooterDataContent(title: sportName)),
+                                titleData: HeaderFooterData(headerData: HeaderFooterDataContent(title: sportName)),
                                 isExpanded: gamesInfoData.count > 0,
                                 fields: gamesInfoData)
     }

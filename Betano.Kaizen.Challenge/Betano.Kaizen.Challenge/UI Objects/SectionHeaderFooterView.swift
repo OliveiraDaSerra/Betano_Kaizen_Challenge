@@ -49,6 +49,8 @@ class SectionHeaderFooterView: UITableViewHeaderFooterView {
         return btn
     }()
 
+    private var viewModelSection: ViewModelSection?
+
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         commonInit()
@@ -65,6 +67,7 @@ class SectionHeaderFooterView: UITableViewHeaderFooterView {
 
     private func setupUI() {
         isUserInteractionEnabled = true
+        setBackgroundColor(.clear)
 
         // ACCESSORY IMAGE
         if accessoryImage.superview == nil { contentView.addSubview(accessoryImage) }
@@ -90,19 +93,21 @@ class SectionHeaderFooterView: UITableViewHeaderFooterView {
         actionButton.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-
-        // ACCESSORY BUTTON
-        
     }
 
-    private func setBackgroundColor(_ bgColor: UIColor) {}
+    private func setBackgroundColor(_ bgColor: UIColor) {
+        contentView.backgroundColor = bgColor
+    }
     
-    func update(title: String? = nil, expanded: Bool = false) {
-        titleLabel.text = title
-        accessoryImage.image = UIImage(systemName: "chevron.\(expanded ? "up" : "down")")
+    func update(with viewModelSection: ViewModelSection?) {
+        self.viewModelSection = viewModelSection
+        guard let viewModelSection = viewModelSection else { return }
+        titleLabel.text = viewModelSection.titleData?.headerData?.title
+        accessoryImage.image = UIImage(systemName: "chevron.\(viewModelSection.expanded ? "up" : "down")")
     }
 
     @objc private func onActionButtonPressed(_ button: UIButton) {
-        print(">>> Button PRESSED!")
+        guard let handler = viewModelSection?.handler else { return }
+        handler(viewModelSection?.key, nil)
     }
 }

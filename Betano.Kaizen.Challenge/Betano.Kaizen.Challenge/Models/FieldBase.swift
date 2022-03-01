@@ -7,11 +7,14 @@
 
 import Foundation
 
+typealias RowReturnHandler = (String?) -> Void
+
 class FieldBase: ElementIdentity {
     var key: String?
     var title: String?
     var favourite: Bool
     var startTime: Double?
+    var handler: RowReturnHandler?
 
     init(with key: String? = nil,
          title: String? = nil,

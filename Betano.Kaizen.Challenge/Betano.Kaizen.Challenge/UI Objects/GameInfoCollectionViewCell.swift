@@ -27,9 +27,9 @@ class GameInfoCollectionViewCell: UICollectionViewCell {
 
     private lazy var timerLabel: UILabel = {
         let lbl = UILabel()
-        lbl.textColor = .label
-        lbl.textAlignment = .center
-        lbl.font = UIFont.systemFont(ofSize: 14.0, weight: .light)
+        lbl.textColor = Definitions.UIComponents.title.textColor
+        lbl.textAlignment = Definitions.UIComponents.title.alignment ?? .center
+        lbl.font = Definitions.UIComponents.title.font
         return lbl
     }()
 
@@ -48,17 +48,17 @@ class GameInfoCollectionViewCell: UICollectionViewCell {
 
     private lazy var homeTitleLabel: UILabel = {
         let lbl = UILabel()
-        lbl.textColor = .label
-        lbl.font = UIFont.systemFont(ofSize: 14.0, weight: .light)
-        lbl.textAlignment = .center
+        lbl.textColor = Definitions.UIComponents.title.textColor
+        lbl.textAlignment = Definitions.UIComponents.title.alignment ?? .center
+        lbl.font = Definitions.UIComponents.title.font
         return lbl
     }()
 
     private lazy var awayTitleLabel: UILabel = {
         let lbl = UILabel()
-        lbl.textColor = .label
-        lbl.font = UIFont.systemFont(ofSize: 14.0, weight: .light)
-        lbl.textAlignment = .center
+        lbl.textColor = Definitions.UIComponents.title.textColor
+        lbl.textAlignment = Definitions.UIComponents.title.alignment ?? .center
+        lbl.font = Definitions.UIComponents.title.font
         return lbl
     }()
 
@@ -124,16 +124,23 @@ class GameInfoCollectionViewCell: UICollectionViewCell {
         self.field = field
         guard let field = field else { return }
         timerLabel.text = "\(field.startTime ?? 0)"
-        favouriteButton.setImage(UIImage(systemName: "star\(field.favourite ? ".fill" : "")"), for: .normal)
-        let teamsNames = (field.title ?? "").components(separatedBy: " - ")
+//        favouriteButton.setImage(UIImage(systemName: "star\(field.favourite ? ".fill" : "")"), for: .normal)
+        updateButton()
+        let teamsNames = (field.title ?? "").components(separatedBy: "-")
         if teamsNames.count > 1 {
-            homeTitleLabel.text = teamsNames.first ?? ""
-            awayTitleLabel.text = teamsNames.last ?? ""
+            homeTitleLabel.text = (teamsNames.first ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+            awayTitleLabel.text = (teamsNames.last ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
         }
     }
 
+    private func updateButton() {
+        guard let field = field else { return }
+        favouriteButton.setImage(UIImage(systemName: "star\(field.favourite ? ".fill" : "")"), for: .normal)
+    }
+
     @objc private func onFavouriteButtonPressed(_ button: UIButton) {
-        print(">>> CVCell PRESSED!")
+        guard let handler = field?.handler else { return }
+        handler(field?.key)
     }
 }
 

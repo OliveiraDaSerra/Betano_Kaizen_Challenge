@@ -72,7 +72,7 @@ class TableViewController: UIViewController, TableViewControllerType {
         view.addSubview(tableView)
         tableView.snp.removeConstraints()
         tableView.snp.makeConstraints { make in
-            make.margins.equalToSuperview()
+            make.edges.equalToSuperview()
         }
     }
 
@@ -84,19 +84,20 @@ class TableViewController: UIViewController, TableViewControllerType {
 
     private func bindViewModel() {
         let output = viewModel.transform(input: TableViewModel.Input(viewDidLoadTrigger: viewDidLoadTrigger.asDriver(),
-                                                                     selectedIndexPath: dataProvider.selectedIndexPath),
+                                                                     selectedElement: dataProvider.selectedElement.asDriver()),
                                          disposeBag: cancellables)
 
-        output.reloadDataTrigger.sink { [weak self] dataSourceData in
+        output.reloadDataTrigger.sink { [weak self] (dataSourceData, reloadInfo) in
             guard let self = self else { return }
             self.updateDataSourceContent(with: dataSourceData)
-            self.reloadTable()
+            self.reloadTable(with: reloadInfo)
         }.store(in: cancellables)
     }
 
-    private func reloadTable() {
+    private func reloadTable(with reloadInfo: ReloadInfo? = nil) {
         executeInMainThread {
-            self.tableView.reloadData()
+            guard let reloadInfo = reloadInfo else { self.tableView.reloadData() ; return }
+            self.dataProvider.reloadCell(for: reloadInfo)
         }
     }
 

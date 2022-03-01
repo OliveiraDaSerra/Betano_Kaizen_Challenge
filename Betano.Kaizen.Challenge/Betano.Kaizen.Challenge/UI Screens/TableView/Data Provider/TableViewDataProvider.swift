@@ -37,7 +37,8 @@ class TableViewDataProvider: DataProvider, UITableViewDelegate {
             setupTableView(with: dataSource)
         }
     }
-    var selectedIndexPath = PassthroughSubject<IndexPath, Never>()
+
+    var selectedElement = PassthroughSubject<(String?, String?), Never>()
 
     init(with dataSource: TableViewDataSource) {
         super.init(with: dataSource)
@@ -53,13 +54,15 @@ class TableViewDataProvider: DataProvider, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        selectedIndexPath.send(indexPath)
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: SectionHeaderFooterView.typeName) as? SectionHeaderFooterView, let viewModel = fetchSectionFor(index: section)
         else { return nil }
-        header.update(title: viewModel.headerFooterData?.headerData?.title, expanded: false)
+        viewModel.handler = { [weak self] (sectionKey: String?, rowKey: String?) in
+            self?.selectedElement.send((sectionKey, rowKey))
+        }
+        header.update(with: viewModel)
         return header
     }
 
@@ -79,5 +82,20 @@ class TableViewDataProvider: DataProvider, UITableViewDelegate {
 
         // Cells
         tableView?.registerNoNibCell(GamesInfoTableViewCell.self)
+    }
+
+    func reloadCell(for reloadInfo: ReloadInfo?) {
+        guard let reloadInfo = reloadInfo,
+              let tableView = tableView,
+              let sectionNumber = reloadInfo.section
+        else { return }
+
+        if reloadInfo.type == .section {
+            tableView.reloadSections([sectionNumber], with: .automatic)
+        } else if reloadInfo.type == .row,
+                  let rowNumber = reloadInfo.row,
+                  let cell = tableView.cellForRow(at: IndexPath(row: 0, section: sectionNumber)) as? GamesInfoTableViewCell {
+            cell.collectionView.reloadItems(at: [IndexPath(row: rowNumber, section: 0)])
+        }
     }
 }

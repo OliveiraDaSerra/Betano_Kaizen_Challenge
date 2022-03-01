@@ -14,9 +14,9 @@ class GamesInfoTableViewCell: UITableViewCell {
 
     // MARK: - Properties
 
-    private var collectionView: UICollectionView!
+    var collectionView: UICollectionView!
     private var collectionViewFlowLayout: UICollectionViewLayout?
-    private var fields: [FieldBase]?
+    private var viewModelSection: ViewModelSection?
 
     // MARK: - Initialization
 
@@ -63,10 +63,10 @@ class GamesInfoTableViewCell: UITableViewCell {
         collectionView.registerNoNibCell(GameInfoCollectionViewCell.self)
     }
 
-    func update(with fields: [FieldBase]?,
+    func update(with viewModelSection: ViewModelSection?,
                 collectionViewLayout: UICollectionViewLayout?) {
         // Properties Values Update
-        self.fields = fields
+        self.viewModelSection = viewModelSection
         self.collectionViewFlowLayout = collectionViewLayout
 
         // Apply the CollectionView setup
@@ -81,14 +81,20 @@ class GamesInfoTableViewCell: UITableViewCell {
 
 extension GamesInfoTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let fields = fields else { return 0 }
+        guard let fields = viewModelSection?.fields else { return 0 }
         return fields.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let fields = fields,
+        guard let fields = viewModelSection?.fields,
               let elem = fields[indexPath.row],
               let cell = dequeueCell(on: collectionView, indexPath: indexPath) as? GameInfoCollectionViewCell else { return UICollectionViewCell() }
+        elem.handler = { [weak self] (rowKey: String?) in
+            guard let sectionHandler = self?.viewModelSection?.handler,
+                  let sectionID = self?.viewModelSection?.key,
+                  let rowID = rowKey else { return }
+            sectionHandler(sectionID, rowID)
+        }
         cell.update(with: elem)
         return cell
     }
