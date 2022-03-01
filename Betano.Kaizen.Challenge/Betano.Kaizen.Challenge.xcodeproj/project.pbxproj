@@ -48,6 +48,7 @@
 		A1D4AB5027CE548400973336 /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D4AB4F27CE548400973336 /* Definitions.swift */; };
 		A1D4AB5227CE551200973336 /* TextSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D4AB5127CE551200973336 /* TextSetup.swift */; };
 		A1D4AB5427CE9FD700973336 /* ReloadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D4AB5327CE9FD700973336 /* ReloadInfo.swift */; };
+		A1D4AB5627CEB54600973336 /* ReloadType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D4AB5527CEB54600973336 /* ReloadType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		A1D4AB4F27CE548400973336 /* Definitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
 		A1D4AB5127CE551200973336 /* TextSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSetup.swift; sourceTree = "<group>"; };
 		A1D4AB5327CE9FD700973336 /* ReloadInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadInfo.swift; sourceTree = "<group>"; };
+		A1D4AB5527CEB54600973336 /* ReloadType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +351,7 @@
 				A17F41DE27CC4DA5000F8500 /* NetworkError.swift */,
 				A17F41E027CC4DDB000F8500 /* HttpMethod.swift */,
 				A132336A27CD8F9200B9F420 /* ListType.swift */,
+				A1D4AB5527CEB54600973336 /* ReloadType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				A17F41E727CC53C5000F8500 /* GameInfo.swift in Sources */,
 				A17F41D427CC2EF6000F8500 /* TableViewCoordinator.swift in Sources */,
 				A17F41EB27CC6257000F8500 /* FieldBase.swift in Sources */,
+				A1D4AB5627CEB54600973336 /* ReloadType.swift in Sources */,
 				A17F41CE27CBE955000F8500 /* TableViewDataSource.swift in Sources */,
 				A17F41DF27CC4DA5000F8500 /* NetworkError.swift in Sources */,
 				A17F41ED27CC635C000F8500 /* ElementIdentity.swift in Sources */,
