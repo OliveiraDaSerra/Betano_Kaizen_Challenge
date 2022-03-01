@@ -29,7 +29,8 @@ struct GameInfo: Codable {
 
 extension GameInfo {
     func asField() -> FieldBase {
-        return FieldBase(with: eventName,
+        return FieldBase(with: eventID,
+                         title: eventName,
                          favourite: false,
                          startTime: eventStartTime)
     }

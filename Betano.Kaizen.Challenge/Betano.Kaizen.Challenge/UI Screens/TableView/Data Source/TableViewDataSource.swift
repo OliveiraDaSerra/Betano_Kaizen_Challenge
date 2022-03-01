@@ -31,10 +31,14 @@ class TableViewDataSource: DataSource, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let viewModelSections = viewModelSections,
               let sectionData = viewModelSections[section].fields else { return 0 }
-        return sectionData.count
+        return sectionData.count > 0 ? 1 : 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: GamesInfoTableViewCell.typeName, for: indexPath) as? GamesInfoTableViewCell,
+              let viewModelSections = viewModelSections,
+              let sectionData = viewModelSections[indexPath.section].fields else { return UITableViewCell() }
+        cell.update(with: sectionData, collectionViewLayout: ListType.horizontalList.cvFlowLayout)
+        return cell
     }
 }

@@ -34,6 +34,7 @@ class TableViewController: UIViewController, TableViewControllerType {
         setupbackgroundColor(with: bgColor)
         setupNavBarTitle(with: navBarTitle)
         setupTableView(with: tableViewStyle)
+        configDataProvider()
         bindViewModel()
         viewDidLoadTrigger.trigger()
     }
@@ -68,14 +69,15 @@ class TableViewController: UIViewController, TableViewControllerType {
 
     private func setupTableView(with style: UITableView.Style = .plain) {
         tableView = UITableView(frame: .zero, style: style)
-        tableView.dataSource = dataProvider.dataSource
-        tableView.delegate = dataProvider
-
         view.addSubview(tableView)
         tableView.snp.removeConstraints()
         tableView.snp.makeConstraints { make in
             make.margins.equalToSuperview()
         }
+    }
+
+    private func configDataProvider() {
+        dataProvider.tableView = tableView
     }
 
     // MARK: - Bind

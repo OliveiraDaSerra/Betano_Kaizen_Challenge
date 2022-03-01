@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A132335327CD376700B9F420 /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132335227CD376700B9F420 /* CommonExtensions.swift */; };
+		A132335527CD3A5000B9F420 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132335427CD3A5000B9F420 /* UITableViewExtensions.swift */; };
+		A132335927CD405800B9F420 /* SectionHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132335827CD405800B9F420 /* SectionHeaderFooterView.swift */; };
+		A132336527CD7D2300B9F420 /* GamesInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132336427CD7D2300B9F420 /* GamesInfoTableViewCell.swift */; };
+		A132336727CD80C700B9F420 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132336627CD80C700B9F420 /* UICollectionViewExtensions.swift */; };
+		A132336927CD86C900B9F420 /* NameDescridableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132336827CD86C900B9F420 /* NameDescridableProtocol.swift */; };
+		A132336B27CD8F9200B9F420 /* ListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132336A27CD8F9200B9F420 /* ListType.swift */; };
+		A132336D27CD927500B9F420 /* GameInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132336C27CD927500B9F420 /* GameInfoCollectionViewCell.swift */; };
 		A17F417A27CBC4F8000F8500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F417927CBC4F8000F8500 /* AppDelegate.swift */; };
 		A17F417C27CBC4F8000F8500 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F417B27CBC4F8000F8500 /* SceneDelegate.swift */; };
 		A17F418327CBC4FB000F8500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A17F418227CBC4FB000F8500 /* Assets.xcassets */; };
@@ -37,7 +45,6 @@
 		A17F41E927CC6150000F8500 /* ViewModelSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F41E827CC6150000F8500 /* ViewModelSection.swift */; };
 		A17F41EB27CC6257000F8500 /* FieldBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F41EA27CC6257000F8500 /* FieldBase.swift */; };
 		A17F41ED27CC635C000F8500 /* ElementIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F41EC27CC635C000F8500 /* ElementIdentity.swift */; };
-		A17F41EF27CC6EE9000F8500 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F41EE27CC6EE9000F8500 /* UIViewControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +65,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A132335227CD376700B9F420 /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
+		A132335427CD3A5000B9F420 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		A132335827CD405800B9F420 /* SectionHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderFooterView.swift; sourceTree = "<group>"; };
+		A132336427CD7D2300B9F420 /* GamesInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesInfoTableViewCell.swift; sourceTree = "<group>"; };
+		A132336627CD80C700B9F420 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
+		A132336827CD86C900B9F420 /* NameDescridableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameDescridableProtocol.swift; sourceTree = "<group>"; };
+		A132336A27CD8F9200B9F420 /* ListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListType.swift; sourceTree = "<group>"; };
+		A132336C27CD927500B9F420 /* GameInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		A17F417627CBC4F8000F8500 /* Betano.Kaizen.Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Betano.Kaizen.Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A17F417927CBC4F8000F8500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A17F417B27CBC4F8000F8500 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +106,6 @@
 		A17F41E827CC6150000F8500 /* ViewModelSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelSection.swift; sourceTree = "<group>"; };
 		A17F41EA27CC6257000F8500 /* FieldBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldBase.swift; sourceTree = "<group>"; };
 		A17F41EC27CC635C000F8500 /* ElementIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementIdentity.swift; sourceTree = "<group>"; };
-		A17F41EE27CC6EE9000F8500 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +134,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A132334F27CD369400B9F420 /* UI Objects */ = {
+			isa = PBXGroup;
+			children = (
+				A132335827CD405800B9F420 /* SectionHeaderFooterView.swift */,
+				A132336427CD7D2300B9F420 /* GamesInfoTableViewCell.swift */,
+				A132336C27CD927500B9F420 /* GameInfoCollectionViewCell.swift */,
+			);
+			path = "UI Objects";
+			sourceTree = "<group>";
+		};
 		A17F416D27CBC4F8000F8500 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +170,7 @@
 				A17F41E227CC50EF000F8500 /* Models */,
 				A17F41DD27CC4D74000F8500 /* Enums */,
 				A17F41D827CC4B39000F8500 /* API */,
+				A132334F27CD369400B9F420 /* UI Objects */,
 				A17F41AD27CBCFC1000F8500 /* UI Screens */,
 				A17F41AB27CBCDD0000F8500 /* Launch Files */,
 				A17F41AA27CBCD3A000F8500 /* Utilities */,
@@ -274,6 +299,7 @@
 			children = (
 				A17F41BB27CBD322000F8500 /* ViewModel.swift */,
 				A17F41EC27CC635C000F8500 /* ElementIdentity.swift */,
+				A132336827CD86C900B9F420 /* NameDescridableProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -294,7 +320,9 @@
 				A17F41C727CBE4F6000F8500 /* CombineExtensions.swift */,
 				A17F41CF27CBF460000F8500 /* ArrayExtensions.swift */,
 				A17F41D127CBF50A000F8500 /* RandomAccessCollectionExtensions.swift */,
-				A17F41EE27CC6EE9000F8500 /* UIViewControllerExtensions.swift */,
+				A132335227CD376700B9F420 /* CommonExtensions.swift */,
+				A132335427CD3A5000B9F420 /* UITableViewExtensions.swift */,
+				A132336627CD80C700B9F420 /* UICollectionViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -313,6 +341,7 @@
 			children = (
 				A17F41DE27CC4DA5000F8500 /* NetworkError.swift */,
 				A17F41E027CC4DDB000F8500 /* HttpMethod.swift */,
+				A132336A27CD8F9200B9F420 /* ListType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -479,17 +508,23 @@
 				A17F41B827CBD157000F8500 /* TableViewController.swift in Sources */,
 				A17F41DA27CC4C30000F8500 /* Definitions.swift in Sources */,
 				A17F41C827CBE4F6000F8500 /* CombineExtensions.swift in Sources */,
+				A132335327CD376700B9F420 /* CommonExtensions.swift in Sources */,
 				A17F41CA27CBE61A000F8500 /* Trigger.swift in Sources */,
 				A17F41BC27CBD322000F8500 /* ViewModel.swift in Sources */,
+				A132336727CD80C700B9F420 /* UICollectionViewExtensions.swift in Sources */,
+				A132336B27CD8F9200B9F420 /* ListType.swift in Sources */,
 				A17F41DC27CC4CB3000F8500 /* Requests.swift in Sources */,
+				A132336927CD86C900B9F420 /* NameDescridableProtocol.swift in Sources */,
+				A132335927CD405800B9F420 /* SectionHeaderFooterView.swift in Sources */,
 				A17F41E127CC4DDB000F8500 /* HttpMethod.swift in Sources */,
+				A132336D27CD927500B9F420 /* GameInfoCollectionViewCell.swift in Sources */,
+				A132335527CD3A5000B9F420 /* UITableViewExtensions.swift in Sources */,
 				A17F41D227CBF50A000F8500 /* RandomAccessCollectionExtensions.swift in Sources */,
 				A17F41E927CC6150000F8500 /* ViewModelSection.swift in Sources */,
 				A17F41D027CBF460000F8500 /* ArrayExtensions.swift in Sources */,
 				A17F41C527CBE4AB000F8500 /* Driver.swift in Sources */,
 				A17F41E727CC53C5000F8500 /* GameInfo.swift in Sources */,
 				A17F41D427CC2EF6000F8500 /* TableViewCoordinator.swift in Sources */,
-				A17F41EF27CC6EE9000F8500 /* UIViewControllerExtensions.swift in Sources */,
 				A17F41EB27CC6257000F8500 /* FieldBase.swift in Sources */,
 				A17F41CE27CBE955000F8500 /* TableViewDataSource.swift in Sources */,
 				A17F41DF27CC4DA5000F8500 /* NetworkError.swift in Sources */,
@@ -497,6 +532,7 @@
 				A17F417C27CBC4F8000F8500 /* SceneDelegate.swift in Sources */,
 				A17F41C327CBE256000F8500 /* CancellableBag.swift in Sources */,
 				A17F41E527CC5252000F8500 /* GameSection.swift in Sources */,
+				A132336527CD7D2300B9F420 /* GamesInfoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
