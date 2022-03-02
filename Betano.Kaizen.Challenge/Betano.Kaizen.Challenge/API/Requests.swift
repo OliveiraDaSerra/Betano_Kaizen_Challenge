@@ -58,10 +58,17 @@ struct Services {
 
 class ServicesRequests {
 
-    static func getListOfSports(completionHandler: @escaping (Result<[GameSection], NetworkError>) -> Void) {
-        guard let urlRequest = createRequest(for: API.Repositories.listOfSports,
+    static func getListOfSports(withMockData: Bool = false,
+                                completionHandler: @escaping (Result<[GameSection], NetworkError>) -> Void) {
+        guard var urlRequest = createRequest(for: API.Repositories.listOfSports,
                                                 headerParams: API.UrlRequests.headerParameters)
         else { completionHandler(.failure(.badURL)) ; return }
+
+        if withMockData,
+           let mockDataUrlRequest = API.UrlRequests.composeMockUrlRequest(for: .listOfSports) {
+            urlRequest = mockDataUrlRequest
+        }
+
         execute(responseType: [GameSection].self,
                 urlRequest: urlRequest,
                 completionHandler: completionHandler)

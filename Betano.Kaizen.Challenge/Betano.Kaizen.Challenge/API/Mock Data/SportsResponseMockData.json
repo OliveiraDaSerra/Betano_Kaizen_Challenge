@@ -1,0 +1,567 @@
+[
+  {
+    "i": "FOOT",
+    "d": "SOCCER",
+    "e": [
+      {
+        "d": "Medeama SC - Dreams FC",
+        "i": "24456069",
+        "si": "FOOT",
+        "sh": "Medeama SC - Dreams FC",
+        "tt": 1668925680
+      },
+      {
+        "d": "Abahani Chittagong - Mohammedan SC",
+        "i": "24439615",
+        "si": "FOOT",
+        "sh": "Abahani Chittagong - Mohammedan SC",
+        "tt": 1670068380
+      },
+      {
+        "d": "Nigde Belediyespor - Adiyaman 1954 SK",
+        "i": "24453468",
+        "si": "FOOT",
+        "sh": "Nigde Belediyespor - Adiyaman 1954 SK",
+        "tt": 1648816260
+      },
+      {
+        "d": "Halide Edip Adivarspor - Sile Yildizspor",
+        "i": "24363881",
+        "si": "FOOT",
+        "sh": "Halide Edip Adivarspor - Sile Yildizspor",
+        "tt": 1649378280
+      },
+      {
+        "d": "Fethiyespor - Ofspor",
+        "i": "24376103",
+        "si": "FOOT",
+        "sh": "Fethiyespor - Ofspor",
+        "tt": 1660274940
+      },
+      {
+        "d": "Adana Demirspor U19 - Besiktas JK U19",
+        "i": "24427351",
+        "si": "FOOT",
+        "sh": "Adana Demirspor U19 - Besiktas JK U19",
+        "tt": 1658955720
+      },
+      {
+        "d": "Hatayspor U19 - Goztepe U19",
+        "i": "24427357",
+        "si": "FOOT",
+        "sh": "Hatayspor U19 - Goztepe U19",
+        "tt": 1656474600
+      },
+      {
+        "d": "Timor-Leste U23 - Philippines U23",
+        "i": "24456875",
+        "si": "FOOT",
+        "sh": "Timor-Leste U23 - Philippines U23",
+        "tt": 1657399440
+      },
+      {
+        "d": "Ajax (Judge) Esports - PAOK (Kot) Esports",
+        "i": "24402874",
+        "si": "FOOT",
+        "sh": "Ajax (Judge) Esports - PAOK (Kot) Esports",
+        "tt": 1667450040
+      },
+      {
+        "d": "Porto (General) Esports - Celtic Glasgow (Ray) Esports",
+        "i": "24402896",
+        "si": "FOOT",
+        "sh": "Porto (General) Esports - Celtic Glasgow (Ray) Esports",
+        "tt": 1659967140
+      },
+      {
+        "d": "Celtic Glasgow (Ray) Esports - Inter Milano (Krouks) Esports",
+        "i": "24402812",
+        "si": "FOOT",
+        "sh": "Celtic Glasgow (Ray) Esports - Inter Milano (Krouks) Esports",
+        "tt": 1668298860
+      },
+      {
+        "d": "Dortmund (Billiot) Esports - Porto (General) Esports",
+        "i": "24402857",
+        "si": "FOOT",
+        "sh": "Dortmund (Billiot) Esports - Porto (General) Esports",
+        "tt": 1656009840
+      },
+      {
+        "d": "Real Madrid (Moldovagang) Esports - Tottenham (Megapolice) Esports",
+        "i": "24457899",
+        "si": "FOOT",
+        "sh": "Real Madrid (Moldovagang) Esports - Tottenham (Megapolice) Esports",
+        "tt": 1661155740
+      },
+      {
+        "d": "Ogc Nice (Walker) Esports - AS Monaco (Bluefir3) Esports",
+        "i": "24455256",
+        "si": "FOOT",
+        "sh": "Ogc Nice (Walker) Esports - AS Monaco (Bluefir3) Esports",
+        "tt": 1667937300
+      },
+      {
+        "d": "Olympique Marseille (Void) Esports - Losc Lille (Zvatiko) Esports",
+        "i": "24455260",
+        "si": "FOOT",
+        "sh": "Olympique Marseille (Void) Esports - Losc Lille (Zvatiko) Esports",
+        "tt": 1670841840
+      },
+      {
+        "d": "Olympique Marseille (Void) Esports - AS Monaco (Bluefir3) Esports",
+        "i": "24455261",
+        "si": "FOOT",
+        "sh": "Olympique Marseille (Void) Esports - AS Monaco (Bluefir3) Esports",
+        "tt": 1659741900
+      },
+      {
+        "d": "Lyon (Fleshka77) Esports - Ogc Nice (Walker) Esports",
+        "i": "24455263",
+        "si": "FOOT",
+        "sh": "Lyon (Fleshka77) Esports - Ogc Nice (Walker) Esports",
+        "tt": 1661507160
+      },
+      {
+        "d": "Spezia (SRL) - Fiorentina (SRL)",
+        "i": "24388345",
+        "si": "FOOT",
+        "sh": "Spezia (SRL) - Fiorentina (SRL)",
+        "tt": 1657373640
+      },
+      {
+        "d": "RCD Mallorca (SRL) - Athletic Bilbao (SRL)",
+        "i": "24388298",
+        "si": "FOOT",
+        "sh": "RCD Mallorca (SRL) - Athletic Bilbao (SRL)",
+        "tt": 1669833000
+      }
+    ]
+  },
+  {
+    "i": "BASK",
+    "d": "BASKETBALL",
+    "e": [
+      {
+        "d": "Cairns Taipans - New Zealand Breakers",
+        "i": "24452095",
+        "si": "BASK",
+        "sh": "Cairns Taipans - New Zealand Breakers",
+        "tt": 1666458420
+      },
+      {
+        "d": "Yokohama B Corsairs - Tokyo Alvark",
+        "i": "24453950",
+        "si": "BASK",
+        "sh": "Yokohama B Corsairs - Tokyo Alvark",
+        "tt": 1651254780
+      },
+      {
+        "d": "Changwon LG Sakers - Wonju Dongbu Promy",
+        "i": "24456295",
+        "si": "BASK",
+        "sh": "Changwon LG Sakers - Wonju Dongbu Promy",
+        "tt": 1659199740
+      },
+      {
+        "d": "Denver Nuggets (Shag) - Phoenix Suns (Bumblebee)",
+        "i": "24454791",
+        "si": "BASK",
+        "sh": "Denver Nuggets (Shag) - Phoenix Suns (Bumblebee)",
+        "tt": 1651219620
+      },
+      {
+        "d": "Utah Jazz (Pirs) - Dallas Mavericks (JoKeR)",
+        "i": "24454807",
+        "si": "BASK",
+        "sh": "Utah Jazz (Pirs) - Dallas Mavericks (JoKeR)",
+        "tt": 1646664960
+      }
+    ]
+  },
+  {
+    "i": "TENN",
+    "d": "TENNIS",
+    "e": [
+      {
+        "d": "Tomas Machac - Andrea Arnaboldi",
+        "i": "24457652",
+        "si": "TENN",
+        "sh": "Tomas Machac - Andrea Arnaboldi",
+        "tt": 1646543400
+      },
+      {
+        "d": "Caroline Garcia - Barbora Krejcikova",
+        "i": "24440974",
+        "si": "TENN",
+        "sh": "Caroline Garcia - Barbora Krejcikova",
+        "tt": 1672054500
+      },
+      {
+        "d": "Darya Kasatkina - Iga Swiatek",
+        "i": "24440981",
+        "si": "TENN",
+        "sh": "Darya Kasatkina - Iga Swiatek",
+        "tt": 1667650320
+      },
+      {
+        "d": "Varvara Gracheva - Maryna Zanevska",
+        "i": "24454205",
+        "si": "TENN",
+        "sh": "Varvara Gracheva - Maryna Zanevska",
+        "tt": 1667747880
+      },
+      {
+        "d": "Ajla Tomljanovic - Elena Gabriela Ruse",
+        "i": "24455573",
+        "si": "TENN",
+        "sh": "Ajla Tomljanovic - Elena Gabriela Ruse",
+        "tt": 1656111840
+      },
+      {
+        "d": "Evgeny Donskoy - Marc Polmans",
+        "i": "24452348",
+        "si": "TENN",
+        "sh": "Evgeny Donskoy - Marc Polmans",
+        "tt": 1658571960
+      },
+      {
+        "d": "Arjun Kadhe - Adil Kalyanpur",
+        "i": "24452349",
+        "si": "TENN",
+        "sh": "Arjun Kadhe - Adil Kalyanpur",
+        "tt": 1647539040
+      },
+      {
+        "d": "Alexander Ritschard - Evan Furness",
+        "i": "24454735",
+        "si": "TENN",
+        "sh": "Alexander Ritschard - Evan Furness",
+        "tt": 1648491540
+      },
+      {
+        "d": "Hiroki Moriya - Emilio Nava",
+        "i": "24454036",
+        "si": "TENN",
+        "sh": "Hiroki Moriya - Emilio Nava",
+        "tt": 1669042140
+      },
+      {
+        "d": "Edas Butvilas - Adam Moundir",
+        "i": "24457283",
+        "si": "TENN",
+        "sh": "Edas Butvilas - Adam Moundir",
+        "tt": 1653677580
+      },
+      {
+        "d": "Andrea Picchione - Stefano DAgostino",
+        "i": "24457286",
+        "si": "TENN",
+        "sh": "Andrea Picchione - Stefano DAgostino",
+        "tt": 1658684760
+      },
+      {
+        "d": "Miha Vetrih - Lucas Bouquet",
+        "i": "24465385",
+        "si": "TENN",
+        "sh": "Miha Vetrih - Lucas Bouquet",
+        "tt": 1650794580
+      },
+      {
+        "d": "Manuel Mazza - Wishaya Trongcharoenchaikul",
+        "i": "24457285",
+        "si": "TENN",
+        "sh": "Manuel Mazza - Wishaya Trongcharoenchaikul",
+        "tt": 1669707600
+      },
+      {
+        "d": "Tomislav Jotovski - Frane Nincevic",
+        "i": "24457292",
+        "si": "TENN",
+        "sh": "Tomislav Jotovski - Frane Nincevic",
+        "tt": 1657611900
+      },
+      {
+        "d": "Sean Hodkin - Sizya Ernest Kivanda",
+        "i": "24456886",
+        "si": "TENN",
+        "sh": "Sean Hodkin - Sizya Ernest Kivanda",
+        "tt": 1670342220
+      },
+      {
+        "d": "Osgar OHoisin - Constantin Frantzen",
+        "i": "24456919",
+        "si": "TENN",
+        "sh": "Osgar OHoisin - Constantin Frantzen",
+        "tt": 1649178360
+      },
+      {
+        "d": "Matthew Rankin - Scott Duncan",
+        "i": "24456920",
+        "si": "TENN",
+        "sh": "Matthew Rankin - Scott Duncan",
+        "tt": 1657418280
+      },
+      {
+        "d": "Ben Jones - Worovin Kumthonkittikul",
+        "i": "24456921",
+        "si": "TENN",
+        "sh": "Ben Jones - Worovin Kumthonkittikul",
+        "tt": 1650492840
+      },
+      {
+        "d": "Mona Barthel - Angelina Wirges",
+        "i": "24456548",
+        "si": "TENN",
+        "sh": "Mona Barthel - Angelina Wirges",
+        "tt": 1667533620
+      },
+      {
+        "d": "Vlada Koval - Jenny Duerst",
+        "i": "24456551",
+        "si": "TENN",
+        "sh": "Vlada Koval - Jenny Duerst",
+        "tt": 1656357480
+      },
+      {
+        "d": "Dorka Drahota Szabo - Yasmine Mansouri",
+        "i": "24456927",
+        "si": "TENN",
+        "sh": "Dorka Drahota Szabo - Yasmine Mansouri",
+        "tt": 1668543300
+      },
+      {
+        "d": "Oleksandra Oliynykova - Ainhoa Atucha Gomez",
+        "i": "24456930",
+        "si": "TENN",
+        "sh": "Oleksandra Oliynykova - Ainhoa Atucha Gomez",
+        "tt": 1659613980
+      },
+      {
+        "d": "Dakshata Girishkumar Patel - Ishwari Matere",
+        "i": "24463472",
+        "si": "TENN",
+        "sh": "Dakshata Girishkumar Patel - Ishwari Matere",
+        "tt": 1660622340
+      },
+      {
+        "d": "Sevil Yuldasheva - Bianca Elena Barbulescu",
+        "i": "24457198",
+        "si": "TENN",
+        "sh": "Sevil Yuldasheva - Bianca Elena Barbulescu",
+        "tt": 1650489480
+      },
+      {
+        "d": "Nevena Sokovic - Sophie Schouten",
+        "i": "24457182",
+        "si": "TENN",
+        "sh": "Nevena Sokovic - Sophie Schouten",
+        "tt": 1652853300
+      },
+      {
+        "d": "Borislava Botusharova - Mariya Vyshkina",
+        "i": "24465847",
+        "si": "TENN",
+        "sh": "Borislava Botusharova - Mariya Vyshkina",
+        "tt": 1655250180
+      }
+    ]
+  },
+  {
+    "i": "TABL",
+    "d": "TABLE TENNIS",
+    "e": [
+      {
+        "d": "Liang Qiu - Guilherme Teodoro",
+        "i": "24428336",
+        "si": "TABL",
+        "sh": "Liang Qiu - Guilherme Teodoro",
+        "tt": 1672170240
+      },
+      {
+        "d": "Andrey Shmakov - Roman Alov",
+        "i": "24455644",
+        "si": "TABL",
+        "sh": "Andrey Shmakov - Roman Alov",
+        "tt": 1665689340
+      },
+      {
+        "d": "Vadim Putilovsky - Pavel Medvedev",
+        "i": "24455645",
+        "si": "TABL",
+        "sh": "Vadim Putilovsky - Pavel Medvedev",
+        "tt": 1666772220
+      },
+      {
+        "d": "Yaroslav Troyanov - Sergey Nikulin",
+        "i": "24455651",
+        "si": "TABL",
+        "sh": "Yaroslav Troyanov - Sergey Nikulin",
+        "tt": 1650792060
+      },
+      {
+        "d": "Antonin Gavlas - Youssef Abdel-Aziz",
+        "i": "24458980",
+        "si": "TABL",
+        "sh": "Antonin Gavlas - Youssef Abdel-Aziz",
+        "tt": 1669433640
+      },
+      {
+        "d": "Uriy Sandulenko - Igor Sukovatiy",
+        "i": "24457064",
+        "si": "TABL",
+        "sh": "Uriy Sandulenko - Igor Sukovatiy",
+        "tt": 1657559100
+      },
+      {
+        "d": "Vyacheslav Kovalenko - Dmitriy Baystryuchenko",
+        "i": "24457021",
+        "si": "TABL",
+        "sh": "Vyacheslav Kovalenko - Dmitriy Baystryuchenko",
+        "tt": 1672169580
+      },
+      {
+        "d": "Evgeniy Omicinskiy - Vasyl Aksenin",
+        "i": "24457060",
+        "si": "TABL",
+        "sh": "Evgeniy Omicinskiy - Vasyl Aksenin",
+        "tt": 1666272120
+      },
+      {
+        "d": "Yevhenii Holoborodko - Dmitriy Zaporozhets",
+        "i": "24457077",
+        "si": "TABL",
+        "sh": "Yevhenii Holoborodko - Dmitriy Zaporozhets",
+        "tt": 1667198460
+      },
+      {
+        "d": "Oleg Shevchuk - Stanislav Malchuk",
+        "i": "24457022",
+        "si": "TABL",
+        "sh": "Oleg Shevchuk - Stanislav Malchuk",
+        "tt": 1668091740
+      }
+    ]
+  },
+  {
+    "i": "VOLL",
+    "d": "VOLLEYBALL",
+    "e": [
+      {
+        "d": "Burevestnik Almaty - Ushkyn Kokshetau",
+        "i": "24456004",
+        "si": "VOLL",
+        "sh": "Burevestnik Almaty - Ushkyn Kokshetau",
+        "tt": 1666336620
+      },
+      {
+        "d": "Lions - Legion Obuhovo",
+        "i": "24455221",
+        "si": "VOLL",
+        "sh": "Lions - Legion Obuhovo",
+        "tt": 1658629260
+      }
+    ]
+  },
+  {
+    "i": "ESPS",
+    "d": "ESPORTS",
+    "e": [
+      {
+        "d": "Ultra Prime - FunPlus Phoenix",
+        "i": "24377275",
+        "si": "ESPS",
+        "sh": "Ultra Prime - FunPlus Phoenix",
+        "tt": 1657917120
+      },
+      {
+        "d": "Enterprise - Anonymo Esports",
+        "i": "24451960",
+        "si": "ESPS",
+        "sh": "Enterprise - Anonymo Esports",
+        "tt": 1647086400
+      },
+      {
+        "d": "Ninjas in Pyjamas - TSM",
+        "i": "24455981",
+        "si": "ESPS",
+        "sh": "Ninjas in Pyjamas - TSM",
+        "tt": 1649235420
+      },
+      {
+        "d": "OXYGEN - FaZe Clan",
+        "i": "24455982",
+        "si": "ESPS",
+        "sh": "OXYGEN - FaZe Clan",
+        "tt": 1654037280
+      },
+      {
+        "d": "Motivate.Trust Gaming - Yangon Galacticos",
+        "i": "24441034",
+        "si": "ESPS",
+        "sh": "Motivate.Trust Gaming - Yangon Galacticos",
+        "tt": 1660749900
+      },
+      {
+        "d": "Nongshim RedForce Challengers - Hanwha Life Esports Challengers",
+        "i": "24377613",
+        "si": "ESPS",
+        "sh": "Nongshim RedForce Challengers - Hanwha Life Esports Challengers",
+        "tt": 1669355820
+      }
+    ]
+  },
+  {
+    "i": "ICEH",
+    "d": "ICE HOCKEY",
+    "e": [
+      {
+        "d": "Kuznetskie Medvedi U20 - Irbis Kazan U20",
+        "i": "24215297",
+        "si": "ICEH",
+        "sh": "Kuznetskie Medvedi U20 - Irbis Kazan U20",
+        "tt": 1665591540
+      }
+    ]
+  },
+  {
+    "i": "BCHV",
+    "d": "BEACH VOLLEYBALL",
+    "e": [
+      {
+        "d": "R.Prytuliak/V.Tyshchenko - V.Antoniuk/A.Matvieiev",
+        "i": "24455722",
+        "si": "BCHV",
+        "sh": "R.Prytuliak/V.Tyshchenko - V.Antoniuk/A.Matvieiev",
+        "tt": 1646698200
+      }
+    ]
+  },
+  {
+    "i": "BADM",
+    "d": "BADMINTON",
+    "e": [
+      {
+        "d": "Harutyun Poghosyan - Hovnan Khachatryan",
+        "i": "24457974",
+        "si": "BADM",
+        "sh": "Harutyun Poghosyan - Hovnan Khachatryan",
+        "tt": 1653547860
+      },
+      {
+        "d": "Zaven Mnatsakanyan - Sargis Isahakyan",
+        "i": "24457977",
+        "si": "BADM",
+        "sh": "Zaven Mnatsakanyan - Sargis Isahakyan",
+        "tt": 1655445900
+      },
+      {
+        "d": "Demi Botha / Diane Olivier - Ly Hoa Chai / Mathilde Lepetit",
+        "i": "24465713",
+        "si": "BADM",
+        "sh": "Demi Botha / Diane Olivier - Ly Hoa Chai / Mathilde Lepetit",
+        "tt": 1654101360
+      }
+    ]
+  }
+]

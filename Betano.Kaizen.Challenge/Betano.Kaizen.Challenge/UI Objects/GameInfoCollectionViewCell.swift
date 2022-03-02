@@ -63,6 +63,7 @@ class GameInfoCollectionViewCell: UICollectionViewCell {
     }()
 
     private var field: FieldBase?
+    private var timer: Timer?
 
     // MARK: - Initialization
     override init(frame: CGRect) {
@@ -77,6 +78,7 @@ class GameInfoCollectionViewCell: UICollectionViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
+        if let timer = timer { timer.invalidate() }
         setupUI()
     }
 
@@ -123,19 +125,74 @@ class GameInfoCollectionViewCell: UICollectionViewCell {
     func update(with field: FieldBase?) {
         self.field = field
         guard let field = field else { return }
-        timerLabel.text = "\(field.startTime ?? 0)"
-//        favouriteButton.setImage(UIImage(systemName: "star\(field.favourite ? ".fill" : "")"), for: .normal)
-        updateButton()
+        updateTimeInformation()
+        updateFavouriteButton()
+        updateTeamsInformation()
+        enableTimer()
+    }
+
+    private func createTimeInformation() -> String {
+        guard let startTime = field?.startTime else { return "<Invalid>" }
+
+        let userCalendar = Calendar.current
+        let calendarComponents: Set<Calendar.Component> = [.hour, .minute, .month, .year, .day, .second]
+        // > Current Date And Event Date Components
+        let currentDateComponents = userCalendar.dateComponents(calendarComponents, from: Date())
+        let eventDateComponents = userCalendar.dateComponents(calendarComponents,
+                                                              from: Date(timeIntervalSince1970: startTime))
+
+        let currentDate = userCalendar.date(from: currentDateComponents)!
+        let eventDate = userCalendar.date(from: eventDateComponents)!
+
+        // Time Left Components
+        let timeLeftComponents = userCalendar.dateComponents([.day, .hour, .minute, .second],
+                                                             from: currentDate,
+                                                             to: eventDate)
+
+        let formatter = DateComponentsFormatter()
+        formatter.unitsStyle = .positional
+        formatter.includesApproximationPhrase = false
+        formatter.includesTimeRemainingPhrase = false
+        formatter.allowedUnits = [.day, .hour, .minute, .second]
+
+        return formatter.string(from: timeLeftComponents) ?? "<Invalid>"
+    }
+
+    private func disableTimer() {
+        if let timer = timer { timer.invalidate() }
+    }
+
+    private func enableTimer() {
+        disableTimer()
+        timer = Timer.scheduledTimer(timeInterval: 1.0,
+                                     target: self,
+                                     selector: #selector(updateTimeInformation),
+                                     userInfo: nil,
+                                     repeats: true)
+    }
+
+    @objc private func updateTimeInformation() {
+        guard let field = field, let startTime = field.startTime else { return }
+        if Date(timeIntervalSince1970: startTime) > Date() {
+            timerLabel.text = createTimeInformation()
+        } else {
+            timerLabel.text = "Started!"
+            disableTimer()
+        }
+    }
+
+    private func updateFavouriteButton() {
+        guard let field = field else { return }
+        favouriteButton.setImage(UIImage(systemName: "star\(field.favourite ? ".fill" : "")"), for: .normal)
+    }
+
+    private func updateTeamsInformation() {
+        guard let field = field else { return }
         let teamsNames = (field.title ?? "").components(separatedBy: "-")
         if teamsNames.count > 1 {
             homeTitleLabel.text = (teamsNames.first ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
             awayTitleLabel.text = (teamsNames.last ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
         }
-    }
-
-    private func updateButton() {
-        guard let field = field else { return }
-        favouriteButton.setImage(UIImage(systemName: "star\(field.favourite ? ".fill" : "")"), for: .normal)
     }
 
     @objc private func onFavouriteButtonPressed(_ button: UIButton) {

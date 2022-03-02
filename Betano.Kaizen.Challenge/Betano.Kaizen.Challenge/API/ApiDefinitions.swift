@@ -44,6 +44,10 @@ struct API {
 
             return urlRequest
         }
+
+        static func composeMockUrlRequest(for mockData: ServicesMockData) -> URLRequest? {
+            return mockData.urlRequest
+        }
     }
 }
 

@@ -49,7 +49,7 @@ class TableViewModel: TableViewModelType {
     // MARK: - Private Methods
 
     private func createDataSource() {
-        ServicesRequests.getListOfSports { [weak self] result in
+        ServicesRequests.getListOfSports(withMockData: false) { [weak self] result in
             switch result {
             case .success(let gamesList):
                 let newData = gamesList.compactMap({ $0.asViewModelSection() })
