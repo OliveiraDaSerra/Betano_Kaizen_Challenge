@@ -47,6 +47,7 @@
 		A17F41E927CC6150000F8500 /* ViewModelSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F41E827CC6150000F8500 /* ViewModelSection.swift */; };
 		A17F41EB27CC6257000F8500 /* FieldBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F41EA27CC6257000F8500 /* FieldBase.swift */; };
 		A17F41ED27CC635C000F8500 /* ElementIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F41EC27CC635C000F8500 /* ElementIdentity.swift */; };
+		A1B2F3C227E1616D0049D244 /* NotificationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2F3C127E1616D0049D244 /* NotificationExtensions.swift */; };
 		A1D4AB5027CE548400973336 /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D4AB4F27CE548400973336 /* Definitions.swift */; };
 		A1D4AB5227CE551200973336 /* TextSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D4AB5127CE551200973336 /* TextSetup.swift */; };
 		A1D4AB5427CE9FD700973336 /* ReloadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D4AB5327CE9FD700973336 /* ReloadInfo.swift */; };
@@ -114,6 +115,7 @@
 		A17F41E827CC6150000F8500 /* ViewModelSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelSection.swift; sourceTree = "<group>"; };
 		A17F41EA27CC6257000F8500 /* FieldBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldBase.swift; sourceTree = "<group>"; };
 		A17F41EC27CC635C000F8500 /* ElementIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementIdentity.swift; sourceTree = "<group>"; };
+		A1B2F3C127E1616D0049D244 /* NotificationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtensions.swift; sourceTree = "<group>"; };
 		A1D4AB4F27CE548400973336 /* Definitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
 		A1D4AB5127CE551200973336 /* TextSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSetup.swift; sourceTree = "<group>"; };
 		A1D4AB5327CE9FD700973336 /* ReloadInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadInfo.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 				A132335227CD376700B9F420 /* CommonExtensions.swift */,
 				A132335427CD3A5000B9F420 /* UITableViewExtensions.swift */,
 				A132336627CD80C700B9F420 /* UICollectionViewExtensions.swift */,
+				A1B2F3C127E1616D0049D244 /* NotificationExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				A17F41C527CBE4AB000F8500 /* Driver.swift in Sources */,
 				A17F41E727CC53C5000F8500 /* GameInfo.swift in Sources */,
 				A17F41D427CC2EF6000F8500 /* TableViewCoordinator.swift in Sources */,
+				A1B2F3C227E1616D0049D244 /* NotificationExtensions.swift in Sources */,
 				A17F41EB27CC6257000F8500 /* FieldBase.swift in Sources */,
 				A1D4AB5627CEB54600973336 /* ReloadType.swift in Sources */,
 				A17F41CE27CBE955000F8500 /* TableViewDataSource.swift in Sources */,

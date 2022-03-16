@@ -17,15 +17,18 @@ class TableViewModel: TableViewModelType {
 
     struct Input {
         let viewDidLoadTrigger: Driver<Void>
+        let viewWillAppearTrigger: Driver<Void>
         let selectedElement: Driver<(String?, String?)>
     }
 
     struct Output {
         let reloadDataTrigger: PassthroughSubject<([ViewModelSection], ReloadInfo?), Never>
+        let updateTimer: PassthroughSubject<Bool, Never>
     }
 
     var dataSourceData: [ViewModelSection] = []
     var reloadDataTrigger = PassthroughSubject<([ViewModelSection], ReloadInfo?), Never>()
+    var updateTimer = PassthroughSubject<Bool, Never>()
 
     // MARK: - Initializers
 
@@ -34,16 +37,25 @@ class TableViewModel: TableViewModelType {
     func transform(input: Input,
                    disposeBag: CancellableBag) -> Output {
         input.viewDidLoadTrigger.sink { [weak self] _ in
-            self?.createDataSource()
+            guard let self = self else { return }
+            self.createDataSource()
+        }
+        .store(in: disposeBag)
+
+        input.viewWillAppearTrigger.sink { [weak self] _ in
+            guard let self = self else { return }
+            self.updateTimer.send(true)
         }
         .store(in: disposeBag)
 
         input.selectedElement.sink { [weak self] (sectionID, rowID) in
-            self?.updateDataSource(sectionID: sectionID, rowID: rowID)
+            guard let self = self else { return }
+            self.updateDataSource(sectionID: sectionID, rowID: rowID)
         }
         .store(in: disposeBag)
 
-        return Output(reloadDataTrigger: reloadDataTrigger)
+        return Output(reloadDataTrigger: reloadDataTrigger,
+                      updateTimer: updateTimer)
     }
 
     // MARK: - Private Methods

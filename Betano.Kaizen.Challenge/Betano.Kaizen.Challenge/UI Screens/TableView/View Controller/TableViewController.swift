@@ -21,12 +21,14 @@ class TableViewController: UIViewController, TableViewControllerType {
     internal var dataProvider: TableViewDataProvider!
     private var tableView: UITableView!
     private var viewDidLoadTrigger = Trigger()
+    private var viewWillAppearTrigger = Trigger()
     private var cancellables = CancellableBag()
 
     private var bgColor: UIColor?
     private var navBarTitle: String?
     private var tableViewStyle: UITableView.Style = .plain
-    
+
+    private var timer: Timer?
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -37,6 +39,11 @@ class TableViewController: UIViewController, TableViewControllerType {
         configDataProvider()
         bindViewModel()
         viewDidLoadTrigger.trigger()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewWillAppearTrigger.trigger()
     }
 
     // MARK: - Initialization Methods
@@ -84,6 +91,7 @@ class TableViewController: UIViewController, TableViewControllerType {
 
     private func bindViewModel() {
         let output = viewModel.transform(input: TableViewModel.Input(viewDidLoadTrigger: viewDidLoadTrigger.asDriver(),
+                                                                     viewWillAppearTrigger: viewWillAppearTrigger.asDriver(),
                                                                      selectedElement: dataProvider.selectedElement.asDriver()),
                                          disposeBag: cancellables)
 
@@ -91,6 +99,12 @@ class TableViewController: UIViewController, TableViewControllerType {
             guard let self = self else { return }
             self.updateDataSourceContent(with: dataSourceData)
             self.reloadTable(with: reloadInfo)
+        }.store(in: cancellables)
+
+        output.updateTimer.sink { [weak self] isActive in
+            guard let self = self else { return }
+//            print(">>> Timer is \(isActive ? "Active" : "Inactive")")
+            isActive ? self.enableTimer() : self.disableTimer()
         }.store(in: cancellables)
     }
 
@@ -105,5 +119,24 @@ class TableViewController: UIViewController, TableViewControllerType {
 
     private func updateDataSourceContent(with data: [ViewModelSection]?) {
         dataProvider.dataSource.updateDataSource(with: data)
+    }
+
+    // MARK: - Timer Methods
+    private func disableTimer() {
+        if let timer = timer { timer.invalidate() }
+    }
+
+    private func enableTimer() {
+        disableTimer()
+        timer = Timer.scheduledTimer(timeInterval: 1.0,
+                                     target: self,
+                                     selector: #selector(updateTimeInformation),
+                                     userInfo: nil,
+                                     repeats: true)
+    }
+
+    @objc private func updateTimeInformation() {
+        NotificationCenter.default.post(name: .updateTimer,
+                                        object: nil)
     }
 }

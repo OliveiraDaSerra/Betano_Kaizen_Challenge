@@ -63,7 +63,6 @@ class GameInfoCollectionViewCell: UICollectionViewCell {
     }()
 
     private var field: FieldBase?
-    private var timer: Timer?
 
     // MARK: - Initialization
     override init(frame: CGRect) {
@@ -78,12 +77,25 @@ class GameInfoCollectionViewCell: UICollectionViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        if let timer = timer { timer.invalidate() }
-        setupUI()
+        commonInit()
     }
 
     private func commonInit() {
         setupUI()
+        configureNotification()
+    }
+
+    func configureNotification() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(updateTimeInformation),
+                                               name: .updateTimer,
+                                               object: nil)
+    }
+
+    private func removeNotification() {
+        NotificationCenter.default.removeObserver(self,
+                                                  name: .updateTimer,
+                                                  object: nil)
     }
 
     private func setupUI() {
@@ -124,11 +136,9 @@ class GameInfoCollectionViewCell: UICollectionViewCell {
 
     func update(with field: FieldBase?) {
         self.field = field
-        guard let field = field else { return }
         updateTimeInformation()
         updateFavouriteButton()
         updateTeamsInformation()
-        enableTimer()
     }
 
     private func createTimeInformation() -> String {
@@ -158,26 +168,13 @@ class GameInfoCollectionViewCell: UICollectionViewCell {
         return formatter.string(from: timeLeftComponents) ?? "<Invalid>"
     }
 
-    private func disableTimer() {
-        if let timer = timer { timer.invalidate() }
-    }
-
-    private func enableTimer() {
-        disableTimer()
-        timer = Timer.scheduledTimer(timeInterval: 1.0,
-                                     target: self,
-                                     selector: #selector(updateTimeInformation),
-                                     userInfo: nil,
-                                     repeats: true)
-    }
-
     @objc private func updateTimeInformation() {
         guard let field = field, let startTime = field.startTime else { return }
         if Date(timeIntervalSince1970: startTime) > Date() {
             timerLabel.text = createTimeInformation()
         } else {
             timerLabel.text = "Started!"
-            disableTimer()
+            removeNotification()
         }
     }
 
